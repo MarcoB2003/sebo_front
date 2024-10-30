@@ -1,0 +1,30 @@
+header{
+  background-color: #246EAE;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.header-a{
+  display: flex;
+  gap: 20px;
+}
+
+.header-a a{
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.logo{
+  height: 80px;
+}
