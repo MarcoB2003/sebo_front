@@ -1,0 +1,100 @@
+.autores-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 20px;
+  background-color: #fffce2; /* Cor de fundo da página */
+  min-height: 92vh; /* Garante que a página ocupe toda a altura da tela */
+}
+
+.banner {
+  background-image: url('https://img77.uenicdn.com/image/upload/v1541530404/category/shutterstock_428131492.jpg.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 101.6%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+
+  /* Adicionando contorno */
+  border: 5px solid rgba(0, 0, 0, 0.8); /* Contorno dourado com opacidade */
+  border-radius: 0px; /* Bordas arredondadas (opcional) */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra opcional para destacar o contorno */
+}
+
+
+.banner h1 {
+  color: #ffffff; /* Cor dourada para o texto */
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 
+    -1px -1px 20 #000,  
+    1px -1px 0 #000,
+    -0px  4px 0 #000,
+    1px  1px 0 #000;
+  -webkit-text-stroke: 3px black;
+  text-align: center;
+}
+
+/* Conteúdo da lista de autores */
+.autores-conteudo {
+  max-width: 900px;
+  width: 800px;
+  text-align: center;
+  margin-top: 40px;
+  
+}
+
+.autores-conteudo h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffd700;
+  text-shadow: 
+  -1px -1px 20 #000,  
+  1px -1px 0 #000,
+  -0px  4px 0 #000,
+  1px  1px 0 #000;
+-webkit-text-stroke: 2.2px black;
+text-align: center;
+}
+
+.autores-conteudo h3 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 25px;
+  text-shadow: 
+  -1px -1px 20 #000,  
+  1px -1px 0 #000,
+  -0px  4px 0 #000,
+  1px  1px 0 #000;
+-webkit-text-stroke: 1.9px black;
+text-align: center;
+}
+
+/* Estilo para a lista de autores */
+.autores-lista {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #ccc; /* Bordas */
+  border-radius: 8px; /* Arredondamento */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: justify;
+}
+
+.autor-link {
+  text-decoration: none; /* Remove o sublinhado */
+  color: #007bff; /* Cor padrão para os links */
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.autor-link:hover {
+  color: #0056b3; /* Cor ao passar o mouse */
+}
