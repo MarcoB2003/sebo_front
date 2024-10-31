@@ -8,9 +8,9 @@ export default function CadastrarLivro() {
     return (
         <div className="container2">
             <aside className="sidebar">
-            <Link to="/consultar" className="sidebar-btn">Consultar Livro</Link>
-            <Link to="/cadastar" className="sidebar-btn">Cadastrar Livro</Link>
-              <Link to="/home" className="sidebar-btn">Home</Link>
+            <Link to="/consultarlivro" className="sidebar-btn">Consultar Livro</Link>
+            <Link to="/cadastrarlivro" className="sidebar-btn">Cadastrar Livro</Link>
+              <Link to="http://localhost:3000" className="sidebar-btn">Home</Link>
                 
             </aside>
             <main className="content">
