@@ -1,0 +1,123 @@
+
+.contato-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centraliza os elementos verticalmente */
+  background-image: url(https://feirenses.com.br/wp-content/uploads/2015/08/sebos-feira-de-santana.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 100vh; /* Ocupa toda a altura da tela */
+}
+
+.contato-banner {
+  text-align: center;
+  color: #ffd700; /* Cor dourada para o texto */
+  padding: 20px;
+  margin-top: -250px;
+}
+
+.contato-banner h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+  -webkit-text-stroke: 3px black;
+}
+
+.contato-banner p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 5px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+  -webkit-text-stroke: 0.8px black;
+}
+
+.contato-form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 800px;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-group label {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.contato-form label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 5px;
+  background-color: #f3f3f3;
+}
+
+.contato-form textarea {
+  resize: none;
+  font-family: Arial, sans-serif;
+}
+
+.contato-form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff; /* Azul para o botão */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contato-form button:hover {
+  background-color: #0056b3;
+}
+
+.confirmation-message {
+  margin-top: 15px;
+  color: #28a745; /* Verde para indicar sucesso */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+/* Animação para aparecer e desaparecer suavemente */
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
