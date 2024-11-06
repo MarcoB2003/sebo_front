@@ -1,88 +1,87 @@
-.container2 {
-    display: flex;
-    height: 100vh;
+.containerB {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
 
-    .sidebar {
-        width: 200px;
-        background-color: #4682B4;
-        display: flex;
-        flex-direction: column;
-        padding-top: 20px;
-      
-        .sidebar-btn {
-            background-color: #4682B4;
-            color: #fff;
-            padding: 15px;
-            text-align: left;
-            text-decoration: none;
-            transition: background-color 0.3s;
-            cursor: pointer;
-            
-            &:hover, &.active {
-                background-color: #1E90FF;
-            }
-        }
+  .sidebar {
+    width: 230px;
+    background-color: #4682B4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+
+    .sidebar-btn {
+      width: 85%;
+      text-align: center;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #4682B4;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #1E90FF;
+      }
     }
-      
-    .content {
-        flex: 1;
-        padding: 20px;
-        background-color: #f4f4f9;
-      
-        .form-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: auto;
-            margin-top: 20px;
-      
-            h2 {
-                margin-bottom: 20px;
-                color: #333;
-                text-align: center;
-            }
-      
-            .form {
-                display: flex;
-                flex-direction: column;
-      
-                .form-group {
-                    display: flex;
-                    flex-direction: column;
-                    margin-bottom: 15px;
-      
-                    label {
-                        font-weight: bold;
-                        margin-bottom: 5px;
-                    }
-      
-                    input[type="text"],
-                    input[type="date"],
-                    input[type="number"] {
-                        padding: 8px;
-                        border: 1px solid #ccc;
-                        border-radius: 5px;
-                        background-color: #e9ecef;
-                    }
-                }
-      
-                .submit-btn {
-                    padding: 10px;
-                    background-color: #4682B4;
-                    color: #fff;
-                    border: none;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    font-size: 16px;
-                    margin-top: 20px;
-      
-                    &:hover {
-                        background-color: #1E90FF;
-                    }
-                }
-            }
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-cadastro {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+
+      h2 {
+        font-size: 1.8rem;
+        color: #4a90e2;
+        margin-bottom: 1.5rem;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.75rem;
+        margin: 0.5rem 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+
+        &:focus {
+          outline: none;
+          border-color: #4a90e2;
+          box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
         }
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: #4a90e2;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #357ABD;
+        }
+      }
     }
+  }
 }
