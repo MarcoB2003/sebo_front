@@ -3,7 +3,7 @@ import axios from 'axios';
 import './index.scss';
 import { Link } from 'react-router-dom';
 
-import { API_URL } from '../../api/constants';
+//import { API_URL } from '../../api/constants';
 
 
 export default function CadastrarVendas() {
@@ -18,7 +18,7 @@ export default function CadastrarVendas() {
     const vendaData = { nomeCliente, dataVenda, nomeLivro, quantidade, valorVenda };
     console.log('Dados a serem enviados:', vendaData);
     try {
-      await axios.post(`${API_URL}/venda`, vendaData);
+      await axios.post(`http://40.118.229.28:5001/venda`, vendaData);
       alert('Venda cadastrada com sucesso');
       setNomeCliente(''); setDataVenda(''); setNomeLivro(''); setQuantidade(0); setValorVenda('');
     } catch (error) {
