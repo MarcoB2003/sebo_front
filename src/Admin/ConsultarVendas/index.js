@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './index.scss';
 
-import { API_URL } from '../../api/constants';
+//import { API_URL } from '../../api/constants';
 
 
 export default function ConsultarVendas() {
@@ -13,7 +13,7 @@ export default function ConsultarVendas() {
     useEffect(() => {
         async function fetchVendas() {
             try {
-                const response = await axios.get(`${API_URL}/venda`);
+                const response = await axios.get(`http://40.118.229.28:5001/venda`);
                 setVendas(response.data);
             } catch (err) {
                 setError('Erro ao carregar vendas');
@@ -24,7 +24,7 @@ export default function ConsultarVendas() {
 
     const handleDeleteVenda = async (id) => {
         try {
-            await axios.delete(`${API_URL}/venda/${id}`);
+            await axios.delete(`http://40.118.229.28:5001/venda/${id}`);
             setVendas(vendas.filter(venda => venda.id !== id));
         } catch (error) {
             setError('Erro ao deletar venda');
