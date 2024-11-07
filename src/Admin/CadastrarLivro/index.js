@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams, useNavigate, Link } from 'react-router-dom'; // Importando useParams e useNavigate
 import './index.scss';
 
-import { API_URL } from '../../api/constants';
+//import { API_URL } from '../../api/constants';
 
 
 export default function CadastrarLivro() {
@@ -21,7 +21,7 @@ export default function CadastrarLivro() {
       // Se existir o id, buscar os dados do livro
       async function fetchLivro() {
         try {
-          const response = await axios.get(`${API_URL}/livro/${id}`);
+          const response = await axios.get(`http://40.118.229.28:5001/livro/${id}`);
           const livro = response.data;
           setTitulo(livro.titulo);
           setSinopse(livro.sinopse);
@@ -42,7 +42,7 @@ export default function CadastrarLivro() {
     try {
       if (id) {
         // Se houver id, é uma atualização de livro
-        await axios.put(`${API_URL}/livro/${id}`, {
+        await axios.put(`http://40.118.229.28:5001/livro/${id}`, {
           titulo,
           sinopse,
           preco,
@@ -52,7 +52,7 @@ export default function CadastrarLivro() {
         alert('Livro atualizado com sucesso');
       } else {
         // Caso contrário, é um cadastro novo
-        await axios.post(`${API_URL}/livro`, {
+        await axios.post(`http://40.118.229.28:5001/livro`, {
           titulo,
           sinopse,
           preco,
