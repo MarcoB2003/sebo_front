@@ -3,7 +3,7 @@ import axios from 'axios';
 import './index.scss';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { API_URL } from '../../api/constants';
+//import { API_URL } from '../../api/constants';
 
 
 export default function ConsultarLivro() {
@@ -12,7 +12,7 @@ export default function ConsultarLivro() {
 
   useEffect(() => {
     async function fetchLivros() {
-      const response = await axios.get(`${API_URL}/livro`);
+      const response = await axios.get(`http://40.118.229.28:5001/livro`);
       setLivros(response.data);
     }
     fetchLivros();
@@ -20,7 +20,7 @@ export default function ConsultarLivro() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${API_URL}/livro/${id}`);
+      await axios.delete(`http://40.118.229.28:5001/livro/${id}`);
       setLivros(livros.filter(livro => livro.id !== id));
     } catch (error) {
       console.error('Erro ao excluir livro:', error);
