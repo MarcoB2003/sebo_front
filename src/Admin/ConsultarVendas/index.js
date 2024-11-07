@@ -3,6 +3,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './index.scss';
 
+import { API_URL } from '../../api/constants';
+
+
 export default function ConsultarVendas() {
     const [vendas, setVendas] = useState([]);
     const [error, setError] = useState(null);
@@ -10,7 +13,7 @@ export default function ConsultarVendas() {
     useEffect(() => {
         async function fetchVendas() {
             try {
-                const response = await axios.get('http://localhost:5001/venda');
+                const response = await axios.get(`${API_URL}/venda`);
                 setVendas(response.data);
             } catch (err) {
                 setError('Erro ao carregar vendas');
@@ -21,7 +24,7 @@ export default function ConsultarVendas() {
 
     const handleDeleteVenda = async (id) => {
         try {
-            await axios.delete(`http://localhost:5001/venda/${id}`);
+            await axios.delete(`${API_URL}/venda/${id}`);
             setVendas(vendas.filter(venda => venda.id !== id));
         } catch (error) {
             setError('Erro ao deletar venda');
