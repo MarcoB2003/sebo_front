@@ -1,0 +1,119 @@
+// src/Editoras.scss
+
+.editoras-page { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+    background-color: #fffce2; /* Cor de fundo da página */
+    min-height: 92vh; /* Garante que a página ocupe toda a altura da tela */
+  }
+  
+  .banner-editoras {
+    background-image: url('https://podpop.com.br/PodPOP/wp-content/uploads/2021/12/Banner-livros-Podpop.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 101.3%; /* Ajustado para 100% para evitar overflow */
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+  
+    /* Adicionando contorno */
+    border: 5px solid rgba(0, 0, 0, 0.8); /* Contorno com opacidade */
+    border-radius: 0px; /* Bordas arredondadas (opcional) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra opcional para destacar o contorno */
+  }
+  
+  .banner-editoras h1 {
+    color: #ffffff; /* Cor do texto */
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 
+      -1px -1px 20 #000,  
+      1px -1px 0 #000,
+      -0px  4px 0 #000,
+      1px  1px 0 #000;
+    -webkit-text-stroke: 3.9px black;
+    text-align: center;
+  }
+  
+  .editoras-carrossel-tela {
+    width: 70%;
+    margin: 20px auto; /* Ajustado para que não sobreponha o banner */
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid rgba(0, 0, 0, 0.8);
+    margin-top: 50px;
+    margin-bottom: 150px;
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ffd700;
+      font-size: 50px;
+      text-shadow: 
+        -1px -1px 20 #000,  
+        1px -1px 0 #000,
+        -0px  4px 0 #000,
+        1px  1px 0 #000;
+      -webkit-text-stroke: 3px black;
+    }
+  }
+  
+  .editora-tela {
+    text-align: center;
+    
+    h3 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+  
+    .imagens-centralizadas {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+  
+      .imagem-e-descricao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%; // Cada imagem ocupa 30% do container para centralizar melhor
+        border: 6px solid rgba(0, 0, 0, 0.772); /* Contorno com opacidade */
+        border-radius: 8px; /* Bordas arredondadas para o contorno */
+        padding: 5px; /* Espaço interno para separar a imagem do contorno */
+        background-color: #fff; /* Cor de fundo para as imagens */
+  
+        .imagem-compacta {
+          width: 100%;
+          height: auto;
+          border-radius: 4px;
+        }
+  
+        .descricao-imagem {
+          margin-top: 10px;
+          font-size: 0.9rem;
+          color: #666;
+          text-align: center;
+        }
+      }
+    }
+  
+    .slick-prev,
+    .slick-next {
+      color: #333;
+      font-size: 2rem;
+      z-index: 1;
+    }
+  
+    .slick-dots {
+      bottom: -30px;
+    }
+  }
+  
