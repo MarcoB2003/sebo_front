@@ -3,6 +3,9 @@ import axios from 'axios';
 import { useParams, useNavigate, Link } from 'react-router-dom'; // Importando useParams e useNavigate
 import './index.scss';
 
+import { API_URL } from '../../api/constants';
+
+
 export default function CadastrarLivro() {
   const [titulo, setTitulo] = useState('');
   const [sinopse, setSinopse] = useState('');
@@ -18,7 +21,7 @@ export default function CadastrarLivro() {
       // Se existir o id, buscar os dados do livro
       async function fetchLivro() {
         try {
-          const response = await axios.get(`http://localhost:5001/livro/${id}`);
+          const response = await axios.get(`${API_URL}/livro/${id}`);
           const livro = response.data;
           setTitulo(livro.titulo);
           setSinopse(livro.sinopse);
@@ -39,7 +42,7 @@ export default function CadastrarLivro() {
     try {
       if (id) {
         // Se houver id, é uma atualização de livro
-        await axios.put(`http://localhost:5001/livro/${id}`, {
+        await axios.put(`${API_URL}/livro/${id}`, {
           titulo,
           sinopse,
           preco,
@@ -49,7 +52,7 @@ export default function CadastrarLivro() {
         alert('Livro atualizado com sucesso');
       } else {
         // Caso contrário, é um cadastro novo
-        await axios.post('http://localhost:5001/livro', {
+        await axios.post(`${API_URL}/livro`, {
           titulo,
           sinopse,
           preco,
