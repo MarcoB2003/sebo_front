@@ -3,6 +3,9 @@ import axios from 'axios';
 import './index.scss';
 import { Link } from 'react-router-dom';
 
+import { API_URL } from '../../api/constants';
+
+
 export default function CadastrarVendas() {
   const [nomeCliente, setNomeCliente] = useState('');
   const [dataVenda, setDataVenda] = useState('');
@@ -15,7 +18,7 @@ export default function CadastrarVendas() {
     const vendaData = { nomeCliente, dataVenda, nomeLivro, quantidade, valorVenda };
     console.log('Dados a serem enviados:', vendaData);
     try {
-      await axios.post('http://localhost:5001/venda', vendaData);
+      await axios.post(`${API_URL}/venda`, vendaData);
       alert('Venda cadastrada com sucesso');
       setNomeCliente(''); setDataVenda(''); setNomeLivro(''); setQuantidade(0); setValorVenda('');
     } catch (error) {
