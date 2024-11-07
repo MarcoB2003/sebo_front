@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-import { API_URL } from '../api/constants';
+//import { API_URL } from '../api/constants';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -14,7 +14,7 @@ export default function Login() {
         event.preventDefault();
         
         try {
-            const response = await axios.post(`${API_URL}/login`, { email, senha });
+            const response = await axios.post(`http://40.118.229.28:5001/login`, { email, senha });
             if (response.status === 200) {
                 navigate('/cadastrarLivro');
             }
