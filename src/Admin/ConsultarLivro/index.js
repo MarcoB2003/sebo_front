@@ -3,13 +3,16 @@ import axios from 'axios';
 import './index.scss';
 import { Link, useNavigate } from 'react-router-dom';
 
+import { API_URL } from '../../api/constants';
+
+
 export default function ConsultarLivro() {
   const [livros, setLivros] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchLivros() {
-      const response = await axios.get('http://localhost:5001/livro');
+      const response = await axios.get(`${API_URL}/livro`);
       setLivros(response.data);
     }
     fetchLivros();
@@ -17,7 +20,7 @@ export default function ConsultarLivro() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/livro/${id}`);
+      await axios.delete(`${API_URL}/livro/${id}`);
       setLivros(livros.filter(livro => livro.id !== id));
     } catch (error) {
       console.error('Erro ao excluir livro:', error);
