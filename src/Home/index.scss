@@ -1,0 +1,234 @@
+body {
+  background-color: #fffce2;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+
+  .arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+
+  .carousel-content {
+    display: flex;
+    box-sizing: border-box; /* Inclui o padding na largura total */
+  }
+
+  .carousel-item {
+    flex: 0 0 200px; /* Largura dos itens no carousel */
+    margin: 0 10px;
+  }
+
+
+.banner1{
+  height: 800px;
+  min-width: 100%;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.texto-banner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente o texto */
+  align-items: center; /* Centraliza horizontalmente o texto */
+  top: -700px;
+  color: white;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000;
+    -webkit-text-stroke: 2px black;
+}
+
+.texto-banner h1 {
+  font-size: 84px; /* Aumenta o tamanho do h1 */
+  margin-bottom: 20px; /* Dá um pequeno espaço entre o h1 e o h2 */
+  color: yellow;
+  
+}
+
+.texto-banner h2 {
+  font-size: 38px; /* Define um tamanho padrão para o h2 */
+  margin-bottom: 10px; /* Controla o espaçamento entre os h2 */
+}
+
+.texto-banner h2:last-child {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.texto-banner h2:last-child:hover {
+  background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+/* Mantém a seção "nossa loja" próxima ao banner */
+.nossa-loja {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  top: -365px; /* Ajuste de posição para reduzir a distância entre o banner e a seção nossa loja */
+  margin-bottom: -350px;
+  margin-top: -158px;
+}
+
+.local-banner{
+  width: 1200px;
+  display: flex;
+}
+
+p{
+  text-align: center;
+  width: 1000px;
+  font-size: 24px;
+  line-height: 1.7;
+}
+
+/* Lista de gibis */
+.lista-gibis {
+  text-align: center;
+  margin: 40px 0;
+
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .gibi, .comprado, .lancamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 380px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #232323;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 70px; /* Adiciona o espaço entre as divs */
+}
+
+.tamanho{
+  font-size: 34px;
+  margin-bottom: 54px;
+}
+
+.gibi{
+background-color: rgb(255, 255, 255);
+}
+
+.comprado{
+background-color: rgb(255, 255, 255);
+}
+
+.lancamento{
+  background-color: rgb(255, 255, 255);
+}
+
+  h1 {
+    font-size: 16px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  img {
+    width: 180px;
+    height: 280px;
+    object-fit: cover;
+  }
+}
+
+/* Editoras */
+.editoras {
+  text-align: center;
+  margin: 50px 0;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .editoras-lista {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+    img {
+      width: 100px;
+      margin: 0 10px;
+      transition: transform 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .tamanho2{
+    font-size: 34px;
+    margin-bottom: 40px;
+  }
+
+  .confira {
+    font-size: 24px;
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+ 
+
+  .logo {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 14px;
+  }
+}
