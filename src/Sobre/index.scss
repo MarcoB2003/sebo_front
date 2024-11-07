@@ -1,0 +1,30 @@
+// src/Sobre/index.scss
+
+.sobre-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    min-height: 100vh;
+    background-color: #fffce2; /* Cor de fundo geral da página */
+}
+
+.banner-sobre {
+    background-image: url('https://vivariomarrecife.com.br/wp-content/uploads/2022/12/livros-mais-vendidos-de-2022.png'); /* URL da imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Garante o alinhamento e facilita o posicionamento do texto */
+}
+
+.banner-sobre h1 {
+    color: #ffffff; /* Cor do texto */
+    font-size: 3rem; /* Tamanho da fonte do título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para legibilidade */
+    margin: 0;
+}
