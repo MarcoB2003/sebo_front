@@ -35,7 +35,9 @@ export default function Contato() {
           Mensagem
           <textarea name="mensagem" rows="8" required />
         </label>
-        <button type="submit">Enviar Mensagem</button>
+        <button className='bt'>
+        <a href="mailto:contato@sebo.com" className="contact-button">Enviar Email</a>
+        </button>
         {/* Condicional para exibir a mensagem de confirmação */}
         {isSubmitted && <p className="confirmation-message">Mensagem Enviada</p>}
       </form>
