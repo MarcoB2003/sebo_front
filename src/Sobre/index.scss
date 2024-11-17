@@ -1,0 +1,153 @@
+.sobre-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #333;
+    background-color: #fffce2; /* Cor de fundo geral */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Banner */
+.banner-sobre {
+    background-image: url('https://vivariomarrecife.com.br/wp-content/uploads/2022/12/livros-mais-vendidos-de-2022.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    width: 101.6%;
+    justify-content: center;
+    margin-top: -20px;
+    position: relative;
+    
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* Camada de contraste */
+        z-index: 1;
+        border: 5px solid rgba(0, 0, 0, 0.8); /* Contorno dourado com opacidade */
+        border-radius: 0px; /* Bordas arredondadas (opcional) */
+    }
+
+    h1 {
+        color: #ffd700;
+        text-shadow: 
+        -1px -1px 20 #000,  
+        1px -1px 0 #000,
+        -0px  4px 0 #000,
+        1px  1px 0 #000;
+      -webkit-text-stroke: 3.5px black;
+      text-align: center;
+        font-size: 5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        margin: 0;
+        z-index: 2;
+    }
+}
+
+
+
+/* Nossa Equipe */
+.team-section {
+    text-align: center;
+    width: 80%;
+    margin-top: -40px;
+    
+
+    h2 {
+        margin-bottom: 30px;
+        color: #333;
+        
+    }
+
+    .team-cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .team-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 5px solid rgb(0, 0, 0); /* Contorno dourado com opacidade */
+            border-radius: 15px; /* Bordas arredondadas (opcional) */
+            
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+                
+            }
+
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 10px;
+                border: 5px solid rgb(0, 0, 0); /* Contorno dourado com opacidade */
+        border-radius: 50px; /* Bordas arredondadas (opcional) */
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin-bottom: 5px;
+                
+            }
+
+            p {
+                color: #777;
+                font-size: 0.9rem;
+                
+            }
+        }
+    }
+}
+
+/* Contato */
+.contact-section {
+    text-align: center;
+    margin: 70px;
+    background-color: #ffffffcf;
+    padding: 50px;
+    border: 5px solid rgb(0, 0, 0); /* Contorno dourado com opacidade */
+    border-radius: 30px; /* Bordas arredondadas (opcional) */
+    h2 {
+        margin-bottom: 20px;
+        color: #0056b3;
+        font-size: 30px;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    .contact-button {
+        display: inline-block;
+        padding: 12px 24px;
+        
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+}
+
+/* Responsividade */
